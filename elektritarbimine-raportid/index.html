@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektritarbimise raportid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card-stats {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Elektritarbimise raportid</h1>
+            <p>12 kuud - Päevane ja öine tarbimine analüüs</p>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">Periood: November 2024 - Oktoober 2025</p>
+        </div>
+
+        <div class="cards">
+            <a href="forwood.html" class="card">
+                <div class="card-icon">🏭</div>
+                <h2>FORWOOD</h2>
+                <p>Ettevõtte elektritarbimise analüüs</p>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="stat-value">60 325</div>
+                        <div class="stat-label">kWh aastas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5 027</div>
+                        <div class="stat-label">kWh/kuu</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="kodu.html" class="card">
+                <div class="card-icon">🏠</div>
+                <h2>KODU</h2>
+                <p>Eramu elektritarbimise analüüs</p>
+                <div class="card-stats">
+                    <div class="stat">
+                        <div class="stat-value">8 775</div>
+                        <div class="stat-label">kWh aastas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">731</div>
+                        <div class="stat-label">kWh/kuu</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
